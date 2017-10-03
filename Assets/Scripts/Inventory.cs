@@ -9,10 +9,10 @@ public class Inventory : MonoBehaviour {
     public bool hasResort = false;
     //perTurnPollution for each building
     //note that pollution is modified by INT, and Q has a range of 50-100
-    public int resortPerTurnPollution=20;
+    public int resortPerTurnPollution;
     //perTurnConsumption for each building
     //note that Lbar is modified by FLOAT, and L has a range of 0-100
-    public float resortPTC=20f;
+    public float resortPTC;
 
     public bool hasPreserve = false;
     public int preservePTP;
@@ -37,16 +37,16 @@ public class Inventory : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        resortPerTurnPollution = 20;
-        resortPTC = 20f;
-        preservePTP = -5;
-        preservePTC = 0f;
-        gravParkingPTP = 5;
-        gravParkingPTC = 0f;
-        paveParkingPTP = 10;
-        paveParkingPTC = 0f;
-        campgroundPTP = 5;
-        campgroundPTC = 5f;
+        //resortPerTurnPollution = 20;
+        //resortPTC = 20f;
+        //preservePTP = -5;
+        //preservePTC = 0f;
+        //gravParkingPTP = 5;
+        //gravParkingPTC = 0f;
+        //paveParkingPTP = 10;
+        //paveParkingPTC = 0f;
+        //campgroundPTP = 5;
+        //campgroundPTC = 5f;
 
         PTCtext = GameObject.Find("PTP").GetComponent<Text>();
         PTPtext = GameObject.Find("PTC").GetComponent<Text>();

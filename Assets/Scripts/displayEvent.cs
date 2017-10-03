@@ -59,8 +59,8 @@ public class displayEvent : MonoBehaviour {
 
     private void fillEventDeck()
     {
-        eventDeck.Add(new Event("There has been a landslide!", "Pay for cleanup", "Eh", -5000, 20));
-        eventDeck.Add(new Event("Algal Bloom!", "Pay for cleanup", "Eh", -10000, 20));
+        eventDeck.Add(new Event("There has been a landslide!", "Pay for cleanup", "Eh", -5000, 20, -50));
+        eventDeck.Add(new Event("Algal Bloom!", "Pay for cleanup", "Eh", -10000, 20, -50));
         eventDeck.Add(new Event("Nub Nubs the squirrel has become internet famous!", "Bask in increased tourism", "Put a price on Nub Nubs's head", 10000));
         eventDeck.Add(new Event("A new species of beautiful birds arrive. They are reportedly delicious when grilled over" +
             " local tree bark.","Watch the birds","Eat the birds",0,0));
@@ -110,10 +110,15 @@ public class displayEvent : MonoBehaviour {
         EventOption1Text.text = currentCard.button1Text;
         EventOption2Text.text = currentCard.button2Text;
 
+        //let's try removing all the listeners we created
+        button1.onClick.RemoveAllListeners();
+        button2.onClick.RemoveAllListeners();
+
 
         //THIS IS A THING. IT SHOULD BE IT'S OWN METHOD. NAMED AFTER THE THING.
         button1.onClick.AddListener(delegate { bank.deposit(currentCard.button1MoneyConsequence); });
         button2.onClick.AddListener(delegate { Q.pollute(currentCard.button2QConsequence); });
+        button1.onClick.AddListener(delegate { Q.pollute(currentCard.button1QConsequence); });
     }
 
     //public void addButtonClickFunction(Button whichButton, functionAndConsequence)

@@ -20,15 +20,17 @@ public class Event : MonoBehaviour {
     public string button2Text;
     public int button1MoneyConsequence;
     public int button2QConsequence;
+    public int button1QConsequence;
     
 
-    public Event(string maintext, string button1txt, string button2txt, int button1Money=0, int button2Q=0)
+    public Event(string maintext, string button1txt, string button2txt, int button1Money=0, int button2Q=0, int button1Q=0)
     {
         EventText = maintext;
         button1Text = button1txt;
         button2Text = button2txt;
         button1MoneyConsequence = button1Money;
         button2QConsequence = button2Q;
+        button1QConsequence = button1Q;
         
 
     }
