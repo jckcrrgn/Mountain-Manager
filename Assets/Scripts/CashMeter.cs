@@ -6,7 +6,7 @@ public class CashMeter : MonoBehaviour {
 
 	public Text moneyText;
 
-	public int currentCash = 50000;
+	public int currentCash = 10000;
 
 	// Use this for initialization
 	void Start () {
