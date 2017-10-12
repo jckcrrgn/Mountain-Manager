@@ -200,6 +200,7 @@ public class QMeter : MonoBehaviour {
 //		QcolorA = currentQ.color.a;
 //
 //		Debug.Log ("Q Grade = "+Qgrade);
+//
 	}
 
     public void setWaterSprite()
