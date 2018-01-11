@@ -121,6 +121,13 @@ public class displayEvent : MonoBehaviour {
         button1.onClick.AddListener(delegate { Q.pollute(currentCard.button1QConsequence); });
     }
 
+    //we need to be able to remove events from the deck
+    //so that they don't recur
+    private void removeEventFromDeck(Event toBeRemoved)
+    {
+        eventDeck.Remove(toBeRemoved);
+    }
+
     //public void addButtonClickFunction(Button whichButton, functionAndConsequence)
     //{
 

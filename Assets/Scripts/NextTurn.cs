@@ -23,6 +23,7 @@ public class NextTurn : MonoBehaviour {
      */
 
     public int turn;
+    public int year;
     public int floodfactor;
     public int thisSeasonsRainfall;
     public SkySpriteSwitch SkySwitch;
@@ -169,7 +170,7 @@ public class NextTurn : MonoBehaviour {
     public void currentYearAndSeasonUI()
     {
         string season = null;
-        int year;
+        
 
         //convert the turn number into the correct season
         //0,4,8,12,16 = spring

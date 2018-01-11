@@ -12,10 +12,11 @@ public class Event : MonoBehaviour {
      * 2buttonText
      * button1MoneyConsequence
      * button2QConsequence
-     *
+     * isOneTimeEvent
      * 
      */
     public string EventText;
+    public bool isOneTimeEvent;
     public string button1Text;
     public string button2Text;
     public int button1MoneyConsequence;
@@ -23,7 +24,7 @@ public class Event : MonoBehaviour {
     public int button1QConsequence;
     
 
-    public Event(string maintext, string button1txt, string button2txt, int button1Money=0, int button2Q=0, int button1Q=0)
+    public Event(string maintext, string button1txt, string button2txt, int button1Money=0, int button2Q=0, int button1Q=0, bool isOneTime=false)
     {
         EventText = maintext;
         button1Text = button1txt;
@@ -31,6 +32,7 @@ public class Event : MonoBehaviour {
         button1MoneyConsequence = button1Money;
         button2QConsequence = button2Q;
         button1QConsequence = button1Q;
+        isOneTimeEvent = isOneTime;
         
 
     }

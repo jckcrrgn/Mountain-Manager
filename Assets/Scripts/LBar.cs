@@ -9,7 +9,7 @@ public class LBar : MonoBehaviour {
     public Inventory Inv;
 
 
-	public float Lpoint = 100;
+	public float Lpoint = 50;
 	private float maxLpoint = 100;
 
     private GameObject agua;
@@ -52,6 +52,13 @@ public class LBar : MonoBehaviour {
 		Lpoint = maxLpoint;
 		UpdateLbar ();
 	}
+
+    public void setL(float setting)
+    {
+        Lpoint = setting;
+        Q.setWaterSprite();
+        UpdateLbar();
+    }
 
 
 
